@@ -1,0 +1,13 @@
+{
+  "name": "todo-app-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Todo app coding challenge](./design/desktop-preview.jpg)",
+  "main": "postcss.config.js",
+  "scripts": {
+    "build": "tailwindcss -i ./styles.css -o ./css/main.css",
+    "watch": "tailwindcss -i ./styles.css -o ./css/main.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
