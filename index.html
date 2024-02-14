@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,16 +11,30 @@
   <title>Frontend Mentor | Todo app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
 </head>
-<body>
+<body class="m-0 p-0">
+  <!-- <div class="flex items-center justify-between bg-gray-900 py-4 px-6 m-0">
+    <h1 class="text-white text-lg font-bold">TODO</h1>
+    <button class="text-white">
+      
+    </button>
+  </div> -->
+  
+  <div class="relative ">
+    <img src="images/bg-mobile-light.jpg" class="absolute  inset-0 w-full h-full object-cover" alt="Background Image">
+    <div class="absolute inset-0 flex items-center justify-center">
+      <input type="text" class="bg-transparent border-b border-white text-white text-lg px-4 py-2" placeholder="Create new todo...">
+    </div>
+  </div>
+  
+  
+  <!-- Todo
 
-  Todo
-
-  <!-- Add dynamic number --> items left
+ items left
 
   All
   Active 
@@ -28,11 +42,11 @@
 
   Clear Completed
 
-  Drag and drop to reorder list
+  Drag and drop to reorder list -->
 
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
