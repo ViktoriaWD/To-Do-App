@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/main.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,22 +16,76 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style> -->
 </head>
-<body class="m-0 p-0">
-  <!-- <div class="flex items-center justify-between bg-gray-900 py-4 px-6 m-0">
-    <h1 class="text-white text-lg font-bold">TODO</h1>
-    <button class="text-white">
-      
-    </button>
-  </div> -->
-  
-  <div class="relative ">
-    <img src="images/bg-mobile-light.jpg" class="absolute  inset-0 w-full h-full object-cover" alt="Background Image">
-    <div class="absolute inset-0 flex items-center justify-center">
-      <input type="text" class="bg-transparent border-b border-white text-white text-lg px-4 py-2" placeholder="Create new todo...">
-    </div>
+<body id="main" class=" m-0 bg-veryLightGray dark:bg-veryDarkBlue">
+  <div class="bgPic relative bg-center bg-cover top-[1px] z-auto " style="background-image: url('images/bg-mobile-light.jpg')">
+  <div class=" hero-section px-6 pt-10">
+    <div class="flex pb-8">
+    <h1 class="text-white text-[28px] font-semibold tracking-[0.7rem] text-center">TODO</h1>
+  <a  id="darkModeToggle" href="#" class="absolute cursor-pointer right-6 text-white text-sm  w-5 h-5 top-[50px] ">
+    <img src="images/icon-moon.svg" alt="Dark mode">
+  </a>
+  </div>
+  <div class="relative pb-[44px] block">
+    <span class="absolute top-[13px] left-0 flex items-center pl-4 ml-5 border-[1px] rounded-full w-5 h-5 ">
+      <!-- <img src="images/icon-check.svg" alt="Check Icon"> -->
+    
+    </span>
+    <input id='inputStyle' type="text" class="w-full  bg-white border-white rounded-lg placeholder:text-darkGrayishBlue text-xs font-light font-body pt-[16px] pb-[15px] pl-14 pr-3  tracking-wide " placeholder="Create a new todo...">
+    
   </div>
   
+</div>
+</div>  
+<div class="  toDoList  px-6 relative w-[375px] ">
+  <div class=" tasks absolute  w-[87.5%]  -top-[26px]"> 
+    
+    <div  id="bg-list" class="task flex items-center py-4 border-b border-gray-300 bg-white rounded-t-lg text-xs font-100 font-body pt-[17px] pb-[17px] pl-5 pr-3 tracking-normal">
+      <button  id="toggleButton" class="cursor-pointer circle mr-3  relative w-5 h-5 border border-gray-200 rounded-full ">
+        <!-- Check icon with circular border -->
+        <div id="hide" class="hidden">
+        <div id="checkContainer" class="absolute flex justify-center align-middle items-center   w-5 h-5 rounded-full  bg-white  top-1/2 left-1/2 transform  -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-checkBackgroundLinearGgradient1 to-checkBackgroundLinearGgradient2 ">
+          <img src="images/icon-check.svg" alt="Check Icon" class="w-[10px] h-[10px] ">
+        </div> 
+        </div> 
+      </button>
+      <p id="task-paragraph" class=" task-p flex-1 text-[12px] font-body  tracking-wider text-darkGrayishBlue bottom-3 ml-1">Example Task</p>
+      <button class="ml-auto focus:outline-none">
+        <img src="images/icon-cross.svg" alt="Cross Icon" class="w-[13px] h-[13px]">
+      </button>
+    </div>
   
+  </div>
+
+  
+  
+</div>
+<div  class=" tasks-counter relative  mt-[29px] w-[375px] "> 
+    
+  <div id="bg-tasks-counter" class=" flex absolute left-6 items-center w-[87.5%] justify-between py-4  bg-white rounded-b-lg text-xs font-100 font-body pt-[17px] pb-[17px] pl-5 pr-3 tracking-normal shadow-lg ">
+    <p id="items-counter" class="font-body text-gray-400 text-xs"><span>0</span> items left</p>
+    <button id="clear-btn" class="font-body text-gray-400 text-xs cursor-pointer">Clear Completed</button>
+  </div>
+
+</div>
+
+<div  class="  relative mt-[95px] w-[375px]  "> 
+    
+  <div id="bg-footer" class=" option-menu flex absolute left-6 w-[87.5%] justify-center gap-5 py-2  bg-white rounded-lg  font-body pt-[14px] pb-[13px] pl-5 pr-3 tracking-normal shadow-sm">
+    <button id="all-btn" class="font-body text-gray-400 text-base after:text-brightBlue focus:text-brightBlue cursor-pointer">All</button>
+    <button id="active-btn" class="font-body text-gray-400 text-base after:text-brightBlue focus:text-brightBlue cursor-pointer">Active</button>
+    <button id="completed-btn" class="font-body text-gray-400 text-base after:text-brightBlue focus:text-brightBlue cursor-pointer">Completed</button>
+  </div>
+
+</div>
+
+<div class="absolute w-[375px] flex justify-center align-middle mt-24 text-gray-400 text-sm tracking-wide font-body">Drag and drop to reorder list</div>
+
+     
+
+
+  
+  <script src="js/script.js"></script>
+
   <!-- Todo
 
  items left

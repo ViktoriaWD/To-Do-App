@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./**/*.{html,js,jsx,css}'],
+  content: ['./**/*.{html,js,jsx}'],
+  darkMode: 'class',
   theme: {
     screens: {
       xs: '376px',
@@ -24,11 +25,11 @@ module.exports = {
         //dark theme
         veryDarkBlue: 'hsl(235, 21%, 11%)',
         veryDarkDesaturatedBlue: 'hsl(235, 24%, 19%)',
-        lightGrayishBlue: 'hsl(234, 39%, 85%)',
-        lightGrayishBlueHover: 'hsl(236, 33%, 92%)',
-        darkGrayishBlue: 'hsl(234, 11%, 52%)',
-        veryDarkGrayishBlue: 'hsl(233, 14%, 35%)',
-        veryDarkGrayishBlue: 'hsl(237, 14%, 26%)',
+        lightGrayishBlue1: 'hsl(234, 39%, 85%)',
+        lightGrayishBlueHover: 'hsl(236, 33%, 92%)', //very light grey-white
+        darkGrayishBlue: 'hsl(234, 11%, 52%)', //grey
+        veryDarkGrayishBlue2: 'hsl(233, 14%, 35%)', //dark grey
+        veryDarkGrayishBlue3: 'hsl(237, 14%, 26%)', //super dark grey-black
     
       },
       fontSize: {
@@ -41,6 +42,7 @@ module.exports = {
         700: '700',
         400: '400',
       },
+     
     },
   },
   plugins: [],
