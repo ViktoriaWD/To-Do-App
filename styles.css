@@ -4,6 +4,24 @@
 
 /* Your custom styles... */
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap')
+/* styles.css */
+.mobile-light {
+    background-image: url('images/bg-mobile-light.jpg'); background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  
 
+  }
+  
+  .lg\:desktop-light {
 
+    background-image: url('images/bg-desktop-light.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+     
+  }
+
+  .lg\:mobile-light {
+    background-image: none;
+  }

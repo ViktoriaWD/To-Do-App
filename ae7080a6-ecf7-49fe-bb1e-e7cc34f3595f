@@ -1,0 +1,15 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./**/*.{html,js,jsx}'],
+  darkMode: 'selector',
+  theme: {
+    screens: {
+      xs: '376px',
+      sm: '480px',
+      md: '768px',
+      lg: '907px', // Change this to 907px
+      xl: '1440px',
+      '2xl': '1920px', 
+    }
+}, 
+}
