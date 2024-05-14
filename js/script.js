@@ -35,6 +35,7 @@ function handleDrop(e) {
   }
 
   saveTasks();
+  
 }
 
 document.querySelector(".tasks").addEventListener("click", function (e) {
