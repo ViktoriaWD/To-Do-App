@@ -25,3 +25,6 @@
   .lg\:mobile-light {
     background-image: none;
   }
+  .toggleButton:hover {
+    border-color: rgb(210, 16, 197);
+  }

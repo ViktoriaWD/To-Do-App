@@ -1,109 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | Todo app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <!-- <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style> -->
-</head>
-<body id="main" class=" m-0 bg-veryLightGray dark:bg-veryDarkBlue">
-  <div class="bgPic mobile-light lg:desktop-light   relative bg-center  top-[1px] z-auto ">
-  
-  <div class=" hero-section px-6 pt-10 md:pt-60  ">
-    <div class="flex justify-between md:justify-around pb-8 md:pb-0 md:px-56 xl:px-[240px]">
-    <h1 class="text-white text-[28px] md:text-[38px] font-semibold tracking-[0.7rem] md:tracking-[1rem] text-center md:-mt-44">TODO</h1>
-  <a  id="darkModeToggle" href="#" class=" cursor-pointer right-6 text-white text-sm  w-5 h-5 top-[50px] pt-2 md:-mt-40">
-    <img src="images/icon-moon.svg" alt="Dark mode">
-  </a>
-  </div>
-  <div class="relative md:w-2/5 pb-[44px] md:-mt-14 block mx-auto">
-    <span class="absolute top-[13px] left-0 flex items-center pl-4 ml-5 border-[1px] rounded-full w-5 h-5 ">
-      <!-- <img src="images/icon-check.svg" alt="Check Icon"> -->
-    
-    </span>
-    <input id='inputStyle' type="text" class="w-full  bg-white border-white rounded-lg placeholder:text-darkGrayishBlue text-xs font-light font-body pt-[16px] pb-[15px] pl-14 pr-3  tracking-wide outline-none" placeholder="Create a new todo...">
-    
-  </div>
-  
-</div>
-</div>  
-<div class="  toDoList   relative -mt-[26px] ">
-  <div class=" tasks  w-[100%] px-6"> 
-    
-    <div  id="bg-list" class="task mx-auto md:w-2/5 flex items-center py-4 border-b border-gray-300 bg-white rounded-t-lg text-xs font-100 font-body pt-[17px] pb-[17px] pl-5 pr-3 tracking-normal">
-      <button  id="toggleButton" class=" toggleButton cursor-pointer circle mr-3  relative w-5 h-5 border border-gray-200 rounded-full ">
-        <!-- Check icon with circular border -->
-        <div id="hide" class=" hide hidden">
-        <div id="checkContainer" class=" checkContainer absolute flex justify-center align-middle items-center   w-5 h-5 rounded-full  bg-white  top-1/2 left-1/2 transform  -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-checkBackgroundLinearGgradient1 to-checkBackgroundLinearGgradient2 ">
-          <img src="images/icon-check.svg" alt="Check Icon" class="w-[10px] h-[10px] ">
-        </div> 
-        </div> 
-      </button>
-      <p id="task-paragraph" class=" taskP flex-1 text-[12px] font-body  tracking-wider text-darkGrayishBlue bottom-3 ml-1">Example Task</p>
-      <button id='crossButton' class=" crossButton ml-auto focus:outline-none">
-        <img src="images/icon-cross.svg" alt="Cross Icon" class="w-[13px] h-[13px]">
-      </button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body id="main" class=" dark bodyMainClass m-0 bg-veryLightGray">
+    <div
+      class="bgPic mobile-light lg:desktop-light relative bg-center top-[1px] z-auto"
+    >
+      <div class="hero-section px-6 pt-10 md:pt-60">
+        <div
+          class="flex justify-between md:justify-around pb-8 md:pb-0 md:px-56 xl:px-[240px]"
+        >
+          <h1
+            class="text-white text-[28px] md:text-[38px] font-semibold tracking-[0.7rem] md:tracking-[1rem] text-center md:-mt-44"
+          >
+            TODO
+          </h1>
+          <button
+            class="tog-button cursor-pointer right-6 text-white text-sm w-5 h-5 top-[50px] pt-2 md:-mt-40"
+          >
+            <img class="icon-sun" src="images/icon-sun.svg" alt="Sun Icon" />
+            <img class="icon-moon" src="images/icon-moon.svg" alt="Moon Icon" />
+          </button>
+        </div>
+        <div class="relative md:w-2/5 pb-[44px] md:-mt-14 block mx-auto">
+          <span
+            class="absolute top-[13px] left-0 flex items-center pl-4 ml-5 border-[1px] rounded-full w-5 h-5"
+          >
+          </span>
+          <input
+            id="inputStyle"
+            type="text"
+            class="w-full bg-white border-white rounded-lg placeholder:text-darkGrayishBlue text-xs font-light font-body pt-[16px] pb-[15px] pl-14 pr-3 tracking-wide outline-none"
+            placeholder="Create a new todo..."
+          />
+        </div>
+      </div>
     </div>
-  
-  </div>
+    <div id="bg-list" class="toDoList relative -mt-[26px]">
+      <div class="tasks w-[100%] px-6 cursor-pointer"></div>
+    </div>
+    <div class="tasks-counter relative px-6 w-full">
+      <div
+        id="bg-tasks-counter"
+        class="flex mx-auto md:w-2/5 gap-6 items-center px-6 justify-between py-4 bg-white rounded-b-lg text-xs font-100 font-body pt-[17px] pb-[17px] tracking-normal shadow-lg"
+      >
+        <p id="items-counter" class="font-body text-gray-400 text-xs">
+          <span class="count">0</span> items left
+        </p>
+        <div
+          id="bg-footer-d"
+          class="option-menu-d mx-auto hidden lg:flex md:w-2/5 justify-center gap-5 py-2 left-6 bg-white rounded-lg font-body tracking-normal"
+        >
+          <button
+            id="all-btn"
+            class="all-btn font-body text-gray-400 text-base after:text-brightBlue focus:text-brightBlue cursor-pointer hover:text-gray-700"
+          >
+            All
+          </button>
+          <button
+            id="active-btn"
+            class="active-btn font-body text-gray-400  text-base  after:text-brightBlue focus:text-brightBlue cursor-pointer  hover:text-gray-700 "
+         
+            >
+            Active
+          </button>
+          <button
+            id="completed-btn"
+            class="completed-btn font-body text-gray-400  text-base after:text-brightBlue focus:text-brightBlue cursor-pointer hover:text-gray-700"
+          >
+            Completed
+          </button>
+        </div>
+        <button
+          id="clear-btn"
+          class="clear-btn font-body text-gray-400 text-xs cursor-pointer hover:text-gray-700"
+        >
+          Clear Completed
+        </button>
+      </div>
+    </div>
 
-  
-  
-</div>
-<div  class=" tasks-counter  relative  px-6 w-full "> 
-   
-  <div id="bg-tasks-counter" class=" flex mx-auto md:w-2/5 gap-6  items-center  px-6 justify-between py-4  bg-white rounded-b-lg text-xs font-100 font-body pt-[17px] pb-[17px]  tracking-normal shadow-lg ">
-    <p id="items-counter" class="font-body text-gray-400 text-xs"><span>0</span> items left</p>
-    <button id="clear-btn" class="font-body text-gray-400 text-xs cursor-pointer">Clear Completed</button>
-  </div>
-  
-</div>
+    <div class="mt-[16px] w-full px-6">
+      <div
+        id="bg-footer"
+        class="option-menu mx-auto flex lg:hidden md:w-2/5 justify-center gap-5 py-2 left-6 bg-white rounded-lg font-body pt-[14px] pb-[13px] tracking-normal shadow-sm"
+      >
+        <button
+          id="all-btn"
+          class="all-btn font-body text-gray-400 text-base after:text-brightBlue focus:text-brightBlue cursor-pointer"
+        >
+          All
+        </button>
+        <button
+          id="active-btn"
+          class="active-btn font-body text-gray-400 text-base after:text-brightBlue focus:text-brightBlue cursor-pointer"
+        >
+          Active
+        </button>
+        <button
+          id="completed-btn"
+          class="completed-btn font-body text-gray-400 text-base after:text-brightBlue focus:text-brightBlue cursor-pointer"
+        >
+          Completed
+        </button>
+      </div>
+    </div>
 
-<div  class="  mt-[16px] w-full px-6 "> 
-    
-  <div id="bg-footer" class="  option-menu mx-auto flex  md:w-2/5 justify-center gap-5 py-2  left-6 bg-white rounded-lg  font-body pt-[14px] pb-[13px]  tracking-normal shadow-sm">
-    <button id="all-btn" class="font-body text-gray-400 text-base after:text-brightBlue focus:text-brightBlue cursor-pointer">All</button>
-    <button id="active-btn" class="font-body text-gray-400 text-base after:text-brightBlue focus:text-brightBlue cursor-pointer">Active</button>
-    <button id="completed-btn" class="font-body text-gray-400 text-base after:text-brightBlue focus:text-brightBlue cursor-pointer">Completed</button>
-  </div>
+    <div
+      class="w-[375px] flex justify-center mx-auto md:w-2/5 mt-16 text-gray-400 text-sm tracking-wide font-body"
+    >
+      Drag and drop to reorder list
+    </div>
 
-</div>
-
-
-<div class=" w-[375px] flex justify-center mx-auto  md:w-2/5 mt-16 text-gray-400 text-sm tracking-wide font-body">Drag and drop to reorder list</div>
-
-     
-
-
-  
-  <script src="js/script.js"></script>
-
-  <!-- Todo
-
- items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list -->
-
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>

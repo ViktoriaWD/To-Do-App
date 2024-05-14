@@ -1,23 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./**/*.{html,js,jsx}'],
-  darkMode: 'selector',
+  darkMode: 'class',
   theme: {
     screens: {
       xs: '376px',
       sm: '480px',
       md: '768px',
-      lg: '907px', // Change this to 907px
+      lg: '907px', 
       xl: '1440px',
       '2xl': '1920px', 
         },
         extend: {
-      // backgroundImage: theme => ({
-      //   'mobile-light': "url('images/bg-mobile-light.jpg')",
-      //   'desktop-light': "url('images/bg-desktop-light.jpg')",
-      // }),
       
+     
       backgroundColor: theme => theme('colors'),
+    
       
       colors: {
         brightBlue: 'hsl(220, 98%, 61%)', // Main Background: hsl(220, 98%, 61%)
