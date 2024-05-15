@@ -34,7 +34,6 @@
 <meta property="twitter:image" content="https://zippy-kitsune-15e850.netlify.app/To-Do-App/To-Do-lists.png" />
   </head>
   <body id="main" class=" dark bodyMainClass m-0 bg-veryLightGray">
-    <main>
     <div
       class="bgPic mobile-light lg:desktop-light relative bg-center top-[1px] z-auto"
     >
@@ -118,19 +117,19 @@
         class="option-menu mx-auto flex lg:hidden md:w-2/5 justify-center gap-5 py-2 left-6 bg-white rounded-lg font-body pt-[14px] pb-[13px] tracking-normal shadow-sm"
       >
         <button
-          
+          id="all-btn"
           class="all-btn font-body text-gray-400 text-base after:text-brightBlue focus:text-brightBlue cursor-pointer"
         >
           All
         </button>
         <button
-         
+          id="active-btn"
           class="active-btn font-body text-gray-400 text-base after:text-brightBlue focus:text-brightBlue cursor-pointer"
         >
           Active
         </button>
         <button
-          
+          id="completed-btn"
           class="completed-btn font-body text-gray-400 text-base after:text-brightBlue focus:text-brightBlue cursor-pointer"
         >
           Completed
@@ -143,7 +142,7 @@
     >
       Drag and drop to reorder list
     </div>
-</main>
+
     <script src="js/script.js"></script>
   </body>
 </html>
