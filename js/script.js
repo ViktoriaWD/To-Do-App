@@ -92,7 +92,16 @@ function loadTasks() {
 
 document.addEventListener("DOMContentLoaded", (event) => {
   loadTasks();
-  
+  tasks = localStorage.getItem("tasks");
+  if (tasks) {
+    tasks = JSON.parse(tasks);
+    loadTasks(tasks);
+  } 
+  // If there isn't, initialize it to an empty list
+  else {
+    tasks = [];
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }
   let currentMode = localStorage.getItem("mode") || "light";
 
   const inputStyle = document.getElementById("inputStyle");
